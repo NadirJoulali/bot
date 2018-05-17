@@ -216,7 +216,18 @@ client.on("message", message => {
 
 
 
-
+client.on('message' , message => { 
+        if (message.content === "-سيرفرات") {
+   
+   if(!message.channel.guild) return;
+     if(message.content < 1023) return
+     const Embed11 = new Discord.RichEmbed()
+   .setAuthor(client.user.username,client.user.avatarURL)
+   .setThumbnail(client.user.avatarURL)
+   .setDescription(`***مجموع السيرفرات ${client.guilds.size} \n \n${client.guilds.map(guilds => `- ${guilds.name}`).join('\n')}***`)
+            message.channel.sendEmbed(Embed11)
+       }
+   });
 
 
 
