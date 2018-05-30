@@ -1335,9 +1335,7 @@ client.on('guildMemberAdd', member => {
     channel.send({embed : embed});
     }) 
 
-bot.on('guildMemberAdd', (member) => {
-member.addRole(member.guild.roles.find('name', "❌| ƔƖƧƖƬƠƦ"));
-});
+
 
 client.on('message', msg => {
   if (msg.author.bot) return;
