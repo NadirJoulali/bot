@@ -773,7 +773,7 @@ const Client = new Discord.Client();
 
          client.on('message', message => {
             if (message.content === 'برب') {
-              message.channel.sendFile("./tyt.png");
+              message.channel.sendFile("تيت.png");
             }
          });
 
@@ -1097,6 +1097,110 @@ channel.send({embed : embed});
 
 
 
+
+
+client.on("message", message => {
+    var prefix = "-";
+    const command = message.content.split(" ")[0];
+
+    if(command == prefix+"off bot"){
+
+        if (!message.guild.member(message.author).hasPermission('MOVE_BOT') || !message.guild.member(message.author).hasPermission('ADMINISTRATOR')) {
+            return message.reply('you do not have permission to perform this action!');
+        }
+
+        var member = message.guild.members.get(message.mentions.users.array()[0].id);
+        if(!message.mentions.users){
+            message.reply(" %سيتم اقفال بوت 90 ")
+            return;
+        }
+
+    if(!member.voiceChannel){
+    message.reply("يتم اقاف بوت")
+    return;
+    }
+              message.guild.createChannel('ON_BOT', 'OFF_BOT').then(c => {
+                member.setVoiceChannel(c).then(() => {
+                    c.delete(305).catch(console.log)
+        
+
+
+    
+      });
+     });
+    }
+});
+
+
+
+
+
+
+client.on('message', message => {
+    if (message.content.startsWith("-كم جبت")) {
+    message.guild.fetchInvites()
+    .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر`))
+     
+    }
+});
+
+
+
+
+
+
+
+client.on("message", (message) => {
+    if (message.content.startsWith('-delet')) {
+        if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
+
+        let args = message.content.split(' ').slice(1);
+        let channel = message.client.channels.find('name', args.join(' '));
+        if (!channel) return message.reply('**There is no room like this name -_-**').catch(console.error);
+        channel.delete()
+    }
+});
+
+
+client.on('message', message => {
+       if (message.content.startsWith(prefix + 'botserver')) {
+     let msg =  client.guilds.map(guild => `**${guild.name}** عدد الاعضاء: ${guild.memberCount}`).join('\n');
+  let embed = new Discord.RichEmbed()
+  .setTitle(`${client.guilds.size}سيرفرات `)
+  .setDescription(`${msg}`)
+  .setColor("#ebf442");
+  message.channel.send(embed);
+}
+});
+
+
+const figlet = require('figlet');
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'tag')) {
+    let args = message.content.split(" ").slice(1);
+if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');  
+
+    figlet(args.join(" "), (err, data) => {
+              message.channel.send("``" + data + "``") //  عدل على النقاط وحطهم 3 من الجهتين مثل`` كذا تزيد واحد
+           })
+}
+});
+
+
+
+
+client.on("message", message => {
+    if(message.content.startsWith("I")){
+
+message.channel.send(message.content.toUpperCase().slice(1));
+    }
+    if(message.content.startsWith("i")){
+
+message.channel.send(message.content.toLowerCase().slice(1));
+    }
+});
+
+
 client.on("message", message => {
      var prefix = "-";
     if(message.content.startsWith(prefix + 'روم مؤقت')) {
@@ -1110,6 +1214,34 @@ client.on("message", message => {
     }
     });
 
+client.on("message", async message => {
+    var prefix = "-";
+    if (message.content.startsWith(prefix + "انجاز")) {
+         var ids = [
+            "20",
+            "1",
+            "13",
+            "18",
+            "17",
+            "9",
+            "31",
+            "22",
+            "23",
+            "2",
+            "11",
+            "19",
+            "24",
+            "25",
+            "12",
+            "33"
+            ]
+            const randomizer = Math.floor(Math.random()*ids.length);
+            const args = message.content.split(" ").slice(1).join(" ")
+    if (!args) return message.channel.send("Put something you want to انجاز!");
+    const image = new Discord.Attachment(`https://www.minecraftskinstealer.com/achievement/a.php?i=${ids[randomizer]}&h=Achievement Get!&t=${args}`, "achievement.png");
+message.channel.send(image)
+    }
+});
 
 
 
@@ -1166,7 +1298,46 @@ channel.send({embed : embed});
 });
 
 
+client.on('guildMemberAdd', member => {
+    let channel = member.guild.channels.find('name', 'welcome');
+    let memberavatar = member.user.avatarURL
+      if (!channel) return;
+    let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(memberavatar)
+        .addField('🎽 | name :  ',`${member}`)
+        .addField('📢 | نورت السيرفر يا قلبي' , `Welcome to the server, ${member}`)
+        .addField('🆔 | user :', "**[" + `${member.id}` + "]**" )
+                .addField('➡| انت العضو رقم',`${member.guild.memberCount}`)
+               
+                  .addField("Name:",`<@` + `${member.id}` + `>`, true)
+                     
+                                     .addField(' الـسيرفر', `${member.guild.name}`,true)
+                                       
+     .setFooter(`${member.guild.name}`)
+        .setTimestamp()
+   
+      channel.sendEmbed(embed);
+    });
+    
+    client.on('guildMemberRemove', member => {
+        var embed = new Discord.RichEmbed()
+        .setAuthor(member.user.username, member.user.avatarURL)
+        .setThumbnail(member.user.avatarURL)
+        .setTitle(`الله معاك ✋:skin-tone-1: 😔`)
+        .setDescription(`مع السلامه تشرفنا بك ✋:skin-tone-1: 😔 `)
+        .addField('👤   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
+        .setColor('RED')
+        .setFooter(`==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
+    
+    var channel =member.guild.channels.find('name', 'welcome')
+    if (!channel) return;
+    channel.send({embed : embed});
+    }) 
 
+bot.on('guildMemberAdd', (member) => {
+member.addRole(member.guild.roles.find('name', "❌| ƔƖƧƖƬƠƦ"));
+});
 
 client.on('message', msg => {
   if (msg.author.bot) return;
