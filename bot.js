@@ -156,6 +156,11 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'رابط') {
+    msg.reply('https://discord.gg/T8HeEYW  :)');
+  }
+});
 
 client.on('message', msg => {
   if (msg.content === 'شعار') {
