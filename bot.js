@@ -173,6 +173,11 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === '-help') {
+    msg.reply('تم ارسال رسالة في خاص  :)');
+  }
+});
 
 client.on('message', msg => {
   if (msg.content === '-off bot') {
@@ -368,9 +373,53 @@ client.on('message', message => {
         }
     });
 
+client.on('message', message => {
+          let args = message.content.split(' ').slice(1);
+   if(message.content.split(' ')[0] == '-color'){
+           const embedd = new Discord.RichEmbed()
+     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
+   .setDescription(`**There's No Color With This Number ** :x: `)
+   .setColor(`ff0000`)
+
+    if(!isNaN(args) && args.length > 0)
+    
+
+if    (!(message.guild.roles.find("name",`${args}`))) return  message.channel.sendEmbed(embedd);
 
 
+       var a = message.guild.roles.find("name",`${args}`)
+                if(!a)return;
+const embed = new Discord.RichEmbed()
+                    
+     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
+   .setDescription(`**Color Changed To Successfully** :white_check_mark: `)
+ 
+   .setColor(`${a.hexColor}`)
+  message.channel.sendEmbed(embed);
+          if (!args)return;
+setInterval(function(){})
+                  let count = 0;
+                  let ecount = 0;
+        for(let x = 1; x < 201; x++){
+           
+            message.member.removeRole(message.guild.roles.find("name",`${x}`))
+          
+            }
+                message.member.addRole(message.guild.roles.find("name",`${args}`));
+        
+            
+    }
+});
 
+
+client.on('message', message => {
+  if(message.content === prefix + 'id') {
+    
+    message.channel.send('**The 🆔 is : `' + message.author.id + '`**.')
+  }
+})
+ 
+ 
 client.on('message', function(msg) {
          var prefix = "-"
     if(msg.content.startsWith (prefix  + 'سيرفر')) {
@@ -390,7 +439,6 @@ client.on('message', function(msg) {
       msg.channel.send({embed:embed});
     }
 	});
-
 
 
 
@@ -771,76 +819,6 @@ const Client = new Discord.Client();
 
 
 
-         client.on('message', message => {
-            if (message.content === 'برب') {
-              message.channel.sendFile("تيت.png");
-            }
-         });
-
-
-
-
-         client.on('message', message => {
-            if (message.content === 'ق1') {
-              message.channel.sendFile("./5.png");
-            }
-         });
-
-
-
-
-
-         client.on('message', message => {
-            if (message.content === '-السلام عليكم') {
-              message.channel.sendFile("./5bz.png");
-            }
-         });
-
-
-
-
-
-
-
-
-         client.on('message', message => {
-            if (message.content === 'حشيش') {
-              message.channel.sendFile("./2.png");
-            }
-         });
-
-
-
-
-
-
-
-
-         client.on('message', message => {
-            if (message.content === 'باك') {
-              message.channel.sendFile("WLC.png");
-            }
-         });
-         
-         
-         
-         
-         
-         
-         
-         
-         
-                 client.on('message', message => {
-            if (message.content === 'ترحيب') {
-              message.channel.sendFile("انا ارحب بك هههه  (تجربة)");
-            }
-         });
-
-
-
-
-
-
 
 
 
@@ -861,7 +839,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`in 60 server -help And 130 user`,"http://twitch.tv/ninja")
+  client.user.setGame(`in 75 server -help And 1300 user`,"http://twitch.tv/ninja")
    client.user.setStatus("dnd")
 });
 
@@ -1139,7 +1117,7 @@ client.on("message", message => {
 client.on('message', message => {
     if (message.content.startsWith("-كم جبت")) {
     message.guild.fetchInvites()
-    .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر`))
+    .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر `))
      
     }
 });
@@ -1163,7 +1141,7 @@ client.on("message", (message) => {
 
 
 client.on('message', message => {
-       if (message.content.startsWith(prefix + 'botserver')) {
+       if (message.content.startsWith(prefix + 'كم')) {
      let msg =  client.guilds.map(guild => `**${guild.name}** عدد الاعضاء: ${guild.memberCount}`).join('\n');
   let embed = new Discord.RichEmbed()
   .setTitle(`${client.guilds.size}سيرفرات `)
@@ -1176,7 +1154,7 @@ client.on('message', message => {
 
 const figlet = require('figlet');
 client.on('message', message => {
-if (message.content.startsWith(prefix + 'tag')) {
+if (message.content.startsWith(prefix + 'تاج')) {
     let args = message.content.split(" ").slice(1);
 if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');  
 
@@ -1253,7 +1231,7 @@ member.addRole(member.guild.roles.find('name', 'not active'));
 
 client.on('message', message => {                      
     if(!message.channel.guild) return;
-       if(message.content.startsWith(prefix + 'active')) {
+       if(message.content.startsWith(prefix + 'تفعيل')) {
         let modlog = client.channels.find('name', 'chat');
        if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
        message.channel.sendMessage(`اضغط على الصح عشان تتفعل`).then(msg => {
@@ -1290,14 +1268,14 @@ client.on('guildMemberRemove', member => {
     .setDescription(`الى اللقاء...`)
     .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
     .setColor('RED')
-    .setFooter(`The King Bot`, '')
+    .setFooter(`The Matra9a Bot`, '')
 
 var channel =member.guild.channels.find('name', 'wlc')
 if (!channel) return;
 channel.send({embed : embed});
 });
 
-
+è_
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome');
     let memberavatar = member.user.avatarURL
@@ -1402,7 +1380,29 @@ client.on('message', message => {
 }
 });
 
+var prefix = "-";
+client.on('message', message => {
+     if(message.author.bot) return;
 
+    if (!message.content.startsWith(prefix)) return;
+    let command = message.content.split(" ")[0];
+    command = command.slice(prefix.length);
+    if (command == "warn") {
+
+        if (!message.guild.member(message.author).hasPermission("MANAGE_MESSAGES")) return message.reply("**ما معك برمشن MANAGE MESSAGES**");
+    let args = message.content.split(" ").slice(1);
+                    let reason = message.content.split(" ").slice(2).join(" ");
+                if (message.mentions.users.size < 1) return message.reply("**منشن شخص**");
+        if (!reason) return message.reply("**اكتب سبب التحذير**");
+
+        message.channel.sendMessage(args.join("  "))
+        message.delete();
+
+
+    }
+
+});
+ 
 
 var prefix = "-"
 client.on('message', message => {
