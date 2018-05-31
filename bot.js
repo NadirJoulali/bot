@@ -444,6 +444,8 @@ client.on('message', function(msg) {
 
 
 
+ 
+
 
 
 client.on("message", message => {
@@ -839,7 +841,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`in 75 server -help And 1300 user`,"http://twitch.tv/ninja")
+  client.user.setGame(`in 60 server -help And 130 user`,"http://twitch.tv/ninja")
    client.user.setStatus("dnd")
 });
 
@@ -1117,7 +1119,7 @@ client.on("message", message => {
 client.on('message', message => {
     if (message.content.startsWith("-كم جبت")) {
     message.guild.fetchInvites()
-    .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر `))
+    .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر`))
      
     }
 });
@@ -1231,7 +1233,7 @@ member.addRole(member.guild.roles.find('name', 'not active'));
 
 client.on('message', message => {                      
     if(!message.channel.guild) return;
-       if(message.content.startsWith(prefix + 'تفعيل')) {
+       if(message.content.startsWith(prefix + 'active')) {
         let modlog = client.channels.find('name', 'chat');
        if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
        message.channel.sendMessage(`اضغط على الصح عشان تتفعل`).then(msg => {
@@ -1268,14 +1270,14 @@ client.on('guildMemberRemove', member => {
     .setDescription(`الى اللقاء...`)
     .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
     .setColor('RED')
-    .setFooter(`The Matra9a Bot`, '')
+    .setFooter(`The King Bot`, '')
 
 var channel =member.guild.channels.find('name', 'wlc')
 if (!channel) return;
 channel.send({embed : embed});
 });
 
-è_
+
 client.on('guildMemberAdd', member => {
     let channel = member.guild.channels.find('name', 'welcome');
     let memberavatar = member.user.avatarURL
@@ -1911,7 +1913,7 @@ client.on('message', message => {
                 .setAuthor(message.guild.name, message.guild.iconURL)
         .setDescription(`
 **
----------------------
+// --------------------
 -[${message.guild.name}]  هذا هو رابط سيرفر
 ---------------------
 -هذا الرابط صالح ل 100 مستخدم فقط
