@@ -151,10 +151,19 @@ client.on('message', message => {
 
 
 
+client.on('message', msg => {
+  if (msg.content === 'الشعار') {
+    msg.reply('ŘǍṈ تفضل روح ادعس يوحش  :)');
+  }
+});
 
 
 
-
+client.on('message', msg => {
+  if (msg.content === 'شعار') {
+    msg.reply('ŘǍṈ تفضل روح ادعس يوحش  :)');
+  }
+});
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
