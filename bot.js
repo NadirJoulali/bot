@@ -1161,17 +1161,7 @@ client.on('message', message => {
 });
 
 
-const figlet = require('figlet');
-client.on('message', message => {
-if (message.content.startsWith(prefix + 'تاج')) {
-    let args = message.content.split(" ").slice(1);
-if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');  
 
-    figlet(args.join(" "), (err, data) => {
-              message.channel.send("``" + data + "``") //  عدل على النقاط وحطهم 3 من الجهتين مثل`` كذا تزيد واحد
-           })
-}
-});
 
 
 
