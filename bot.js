@@ -166,7 +166,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'شعار') {
-    msg.reply('ŘǍṈ تفضل روح ادعس يوحش  :)');
+    msg.reply('ṠĞ تفضل روح ادعس يوحش  :)');
   }
 });
 
