@@ -151,8 +151,15 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
+  if (msg.content === 'رابط') {
+    msg.reply('https://discord.gg/bjVKHtg  :)');
+  }
+});
+
+
+client.on('message', msg => {
   if (msg.content === 'الرابط') {
-    msg.reply('https://discord.gg/T8HeEYW  :)');
+    msg.reply('https://discord.gg/bjVKHtg  :)');
   }
 });
 
