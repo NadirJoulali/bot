@@ -2298,4 +2298,4 @@ message.channel.sendEmbed(avatar)
 
 
 
-client.login("NDQzODMxOTAxODc1MDc3MTIx.Dd3APA.2smfJLPcuaujRH8L2Ai3VRxbMZs");
+client.login("NDY0MTM5NTYyNTU4NDIzMDQw.Dh6nPg.rCqnFnHGuDQxReZhrrB0cYSnfnc");
