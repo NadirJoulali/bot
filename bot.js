@@ -146,7 +146,7 @@ const x5bz4 = [
 
 client.on('message', msg => {
   if (msg.content === 'الشعار') {
-    msg.reply('ŘǍṈ تفضل روح ادعس يوحش  :)');
+    msg.reply('ṠĞ تفضل روح ادعس يوحش  :)');
   }
 });
 
