@@ -193,11 +193,6 @@ client.on('message', msg => {
   }
 });
 
-client.on('message', msg => {
-  if (msg.content === '-off bot') {
-    msg.reply('سيتم  اضفاء بوت :)');
-  }
-});
 
 
 client.on('message', msg => {
@@ -208,11 +203,7 @@ client.on('message', msg => {
 
 
 
-client.on('message', msg => {
-  if (msg.content === '-on') {
-    msg.reply('تم اشتغال بوت استمتع  :)');
-  }
-});
+
 
 
 client.on("message", message => {
@@ -607,7 +598,7 @@ client.on("message", message => {
   
   
 client.on('message', message => {
-    if (message.content.startsWith("^avatar")) {
+    if (message.content.startsWith("-avatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -1093,37 +1084,7 @@ channel.send({embed : embed});
 
 
 
-client.on("message", message => {
-    var prefix = "-";
-    const command = message.content.split(" ")[0];
 
-    if(command == prefix+"off bot"){
-
-        if (!message.guild.member(message.author).hasPermission('MOVE_BOT') || !message.guild.member(message.author).hasPermission('ADMINISTRATOR')) {
-            return message.reply('you do not have permission to perform this action!');
-        }
-
-        var member = message.guild.members.get(message.mentions.users.array()[0].id);
-        if(!message.mentions.users){
-            message.reply(" %سيتم اقفال بوت 90 ")
-            return;
-        }
-
-    if(!member.voiceChannel){
-    message.reply("يتم اقاف بوت")
-    return;
-    }
-              message.guild.createChannel('ON_BOT', 'OFF_BOT').then(c => {
-                member.setVoiceChannel(c).then(() => {
-                    c.delete(305).catch(console.log)
-        
-
-
-    
-      });
-     });
-    }
-});
 
 
 
@@ -1131,7 +1092,7 @@ client.on("message", message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("-كم جبت")) {
+    if (message.content.startsWith("-inv")) {
     message.guild.fetchInvites()
     .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر`))
      
