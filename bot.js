@@ -1542,25 +1542,7 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 
 
 
-client.on('message', message => {
-var prefix = ('-op');
- if (message.content === (prefix) + "icon") {
-    var ms = 5000;
-    var Icon = [`https://imgur.com/Eqo0SM1`];
-    var i = -1;
-    var j = 0;
-   setInterval(function (){
-       if( i == -1 ){
-            j = 1;
-        }
-        if( i == (Icon.length)-1 ){
-            j = -1;
-        }
-       i = i+j;
-        message.guild.setIcon(Icon[i]);
-    }, ms);5000
-    }
-});
+
 
 
 
