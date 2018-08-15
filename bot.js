@@ -84,7 +84,7 @@ const x5bz4 = [
    '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدنا في نشر البوت وادخل هذا السيرفر https://discord.gg/dqVFqrN ***'
 ]
  client.on('message', message => {
- if (message.content.startsWith('-مريم')) {
+ if (message.content.startsWith('-opمريم')) {
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة مريم ..")
   .setColor('RANDOM')
@@ -146,27 +146,20 @@ const x5bz4 = [
 
 client.on('message', msg => {
   if (msg.content === 'الشعار') {
-    msg.reply('ṠĞ تفضل روح ادعس يوحش  :)');
+    msg.reply('ŘǍṈ تفضل روح ادعس يوحش  :)');
   }
 });
-
-client.on('message', msg => {
-  if (msg.content === 'رابط') {
-    msg.reply('https://discord.gg/bjVKHtg  :)');
-  }
-});
-
 
 client.on('message', msg => {
   if (msg.content === 'الرابط') {
-    msg.reply('https://discord.gg/bjVKHtg  :)');
+    msg.reply('https://discord.gg/T8HeEYW  :)');
   }
 });
 
 
 client.on('message', msg => {
   if (msg.content === 'شعار') {
-    msg.reply('ṠĞ تفضل روح ادعس يوحش  :)');
+    msg.reply('ŘǍṈ تفضل روح ادعس يوحش  :)');
   }
 });
 
@@ -188,10 +181,11 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content === '-help') {
+  if (msg.content === '-ophelp') {
     msg.reply('تم ارسال رسالة في خاص  :)');
   }
 });
+
 
 
 
@@ -207,7 +201,7 @@ client.on('message', msg => {
 
 
 client.on("message", message => {
- if (message.content === "-help") {
+ if (message.content === "-ophelp") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setFooter('© Premium Bot:heart: جميع الحقوق محفوظة 2017 لــبوت')
@@ -253,7 +247,7 @@ const Love = [  "**احبك / عدد قطرات المـــطر والشجر و
 
 
  client.on('message', message => {
-   if (message.content.startsWith("-حب")) {
+   if (message.content.startsWith("-opحب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -270,10 +264,10 @@ const Love = [  "**احبك / عدد قطرات المـــطر والشجر و
 
 
 client.on("message", message => {
- if (message.content === "-invite") {
+ if (message.content === "-opinvite") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('© Premium Bot:heart: جميع الحقوق محفوظة 2017 لــبوت')
+      .setFooter('© Premium Bot:heart: جميع الحقوق محفوظة 2018 لــبوت')
       .addField(' شكرا لاستخدمك مطرقة بوت ', `هنا رابط بوتك`)
   message.author.send({embed});
 
@@ -281,7 +275,7 @@ client.on("message", message => {
 });
 
 
-var prefix = "-";
+var prefix = "-op";
 var cats = ["https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg","http://www.dogbazar.org/wp-content/uploads/2014/09/british-bull-dog-puppies.jpg","http://cdn2-www.dogtime.com/assets/uploads/gallery/german-shepherd-dog-breed-pictures/standing-7.jpg","http://cdn.akc.org/Marketplace/Breeds/German_Shepherd_Dog_SERP.jpg","https://animalso.com/wp-content/uploads/2016/12/black-german-shepherd_2.jpg","https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpg","https://www.petfinder.com/wp-content/uploads/2012/11/101438745-cat-conjunctivitis-causes.jpg","http://www.i-love-cats.com/images/2015/04/12/cat-wallpaper-38.jpg","https://www.aspca.org/sites/default/files/cat-care_urine-marking_main-image.jpg","https://s-media-cache-ak0.pinimg.com/originals/f0/3b/76/f03b7614dfadbbe4c2e8f88b69d12e04.jpg","http://www.rd.com/wp-content/uploads/sites/2/2016/04/15-cat-wants-to-tell-you-attention.jpg","https://www.thelocal.de/userdata/images/article/fa6fd5014ccbd8f4392f716473ab6ff354f871505d9128820bbb0461cce1d645.jpg","https://www.adelaidezoo.com.au/wp-content/uploads/sites/2/animals/GiantPanda3Slider.jpg","http://imagem.band.com.br/f_230168.jpg"]
     client.on('message', message => {
         var args = message.content.split(" ").slice(1);
@@ -302,8 +296,8 @@ client.on('ready', () => {
 
 
 client.on('message', msg => {
-  if (msg.content === 'في حد') {
-    msg.reply('مافي حد في بس انا هههه  :)');
+  if (msg.content === 'كاين شي حد') {
+    msg.reply('مافي حد في بس انا ماكين حتى شي واحد   :)');
   }
 });
 
@@ -315,7 +309,7 @@ client.on('message', msg => {
 
 
 
-var prefix = "-";
+var prefix = "-op";
 client.on('message', message => {
          if (message.content === prefix + "وقت") {
          if (!message.channel.guild) return message.reply('** This command only for servers **');  
@@ -380,7 +374,7 @@ client.on('message', message => {
 
 client.on('message', message => {
           let args = message.content.split(' ').slice(1);
-   if(message.content.split(' ')[0] == '-color'){
+   if(message.content.split(' ')[0] == '-opcolor'){
            const embedd = new Discord.RichEmbed()
      .setFooter('Requested by '+message.author.username, message.author.avatarURL)
    .setDescription(`**There's No Color With This Number ** :x: `)
@@ -454,11 +448,11 @@ client.on('message', function(msg) {
 
 
 client.on("message", message => {
- if (message.content === "-support") {
+ if (message.content === "-opsupport") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setFooter('© Premium Bot:heart: جميع الحقوق محفوظة 2017 لــبوت')  
-      .addField('سيرفر الدعم الفني', `  https://discord.gg/dFCBGX6  `)
+      .addField('سيرفر الدعم الفني', `  https://discord.gg/qTT5f7  `)
   message.author.send({embed});
 
  }
@@ -485,7 +479,7 @@ const secreT = [
 
 
  client.on('message', message => {
-   if (message.content.startsWith("-خواطر")) {
+   if (message.content.startsWith("-opخواطر")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -562,7 +556,7 @@ const Za7f = [
 
 
  client.on('message', message => {
-   if (message.content.startsWith("-عقاب")) {
+   if (message.content.startsWith("-opعقاب")) {
                 if(!message.channel.guild) return message.reply('** This command only for servers**');
   var embed = new Discord.RichEmbed()
   .setColor('RANDOM')
@@ -577,7 +571,7 @@ const Za7f = [
 
 
 client.on("message", message => {
-    const prefix = "-"
+    const prefix = "-op"
               
           if(!message.channel.guild) return;
    if(message.author.bot) return;
@@ -598,7 +592,7 @@ client.on("message", message => {
   
   
 client.on('message', message => {
-    if (message.content.startsWith("-avatar")) {
+    if (message.content.startsWith("-opavatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -617,7 +611,7 @@ client.on('message', message => {
 
 
 
-var prefix = "-";
+var prefix = "-op";
 var rebel = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png"]
     client.on('message', message => {
         var args = message.content.split(" ").slice(1);
@@ -657,7 +651,7 @@ function hasRole(mem, role) {
   
   
 client.on('message', message => {
-    if (message.content.startsWith("-stats")) {
+    if (message.content.startsWith("-opstats")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .addField('Uptime', timeCon(process.uptime()), true)
@@ -686,7 +680,7 @@ function timeCon(time) {
 
 
 client.on('message', message => {
-     if (message.content === "-كم") {
+     if (message.content === "-opكم") {
 		 if(!message.channel.guild) return;
      let embed = new Discord.RichEmbed()
   .setColor("RANDOM")
@@ -704,7 +698,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-     if (message.content === "-ping") {
+     if (message.content === "-opping") {
       const embed = new Discord.RichEmbed()
  
   .setColor("#FF0000")
@@ -727,7 +721,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content === "-roles") {
+    if (message.content === "-oproles") {
 		if(!message.channel.guild) return;
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
         const embed = new Discord.RichEmbed()
@@ -742,7 +736,7 @@ client.on('message', message => {
 
 
 client.on('message' , message => {
-    if (message.content === "-support") {
+    if (message.content === "-opsupport") {
         if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
      const embed = new Discord.RichEmbed()
  .setColor("RANDOM")
@@ -761,7 +755,7 @@ client.on('message' , message => {
 
 
 
-   var prefix = "-";
+   var prefix = "-op";
 var cats = [
 
 "https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg",
@@ -879,7 +873,7 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-    if(message.content == '-member') {
+    if(message.content == '-opmember') {
     const embed = new Discord.RichEmbed()
     .setDescription(`**Members info🔋
 :white_check_mark:  اون لاين:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}
@@ -919,7 +913,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("-avatar")) {
+    if (message.content.startsWith("-opavatar")) {
         var mentionned = message.mentions.users.first();
     var x5bzm;
       if(mentionned){
@@ -941,7 +935,7 @@ client.on('message', message => {
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("-ct")) {
+if (message.content.startsWith("-opct")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
@@ -953,7 +947,7 @@ message.channel.sendMessage('تـم إنـشاء روم كـتابـي')
 
 
 client.on("message", (message) => {
-if (message.content.startsWith("-cv")) {
+if (message.content.startsWith("-opcv")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
@@ -966,7 +960,7 @@ if (message.content.startsWith("-cv")) {
 
 
 client.on('message', message => {
- if (message.content.startsWith('-صراحه')) {
+ if (message.content.startsWith('-opصراحه')) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
   var client= new Discord.RichEmbed()
   .setTitle("لعبة صراحة ..")
@@ -988,7 +982,7 @@ client.on("message", message => {
   
   let command = message.content.split(" ")[0];
   
-  if (command === "-mute") {
+  if (command === "-opmute") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
@@ -1024,7 +1018,7 @@ return message.reply("**:white_check_mark: .. تم اعطاء العضو ميو�
   
   let command = message.content.split(" ")[0];
   
-  if (command === "-unmute") {
+  if (command === "-opunmute") {
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'mute-log');
@@ -1092,7 +1086,7 @@ channel.send({embed : embed});
 
 
 client.on('message', message => {
-    if (message.content.startsWith("-inv")) {
+    if (message.content.startsWith("-opكم جبت")) {
     message.guild.fetchInvites()
     .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر`))
      
@@ -1106,7 +1100,7 @@ client.on('message', message => {
 
 
 client.on("message", (message) => {
-    if (message.content.startsWith('-delet')) {
+    if (message.content.startsWith('-opdelet')) {
         if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
 
         let args = message.content.split(' ').slice(1);
@@ -1147,7 +1141,7 @@ message.channel.send(message.content.toLowerCase().slice(1));
 
 
 client.on("message", message => {
-     var prefix = "-";
+     var prefix = "-op";
     if(message.content.startsWith(prefix + 'روم مؤقت')) {
      let args = message.content.split(" ").slice(1);
        var nam = args.join(' ');
@@ -1160,7 +1154,7 @@ client.on("message", message => {
     });
 
 client.on("message", async message => {
-    var prefix = "-";
+    var prefix = "-op";
     if (message.content.startsWith(prefix + "انجاز")) {
          var ids = [
             "20",
@@ -1307,7 +1301,7 @@ client.on('message', msg => {
 });
 
 
-var prefix = "-"
+var prefix = "-op"
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -1347,7 +1341,7 @@ client.on('message', message => {
 }
 });
 
-var prefix = "-";
+var prefix = "-op";
 client.on('message', message => {
      if(message.author.bot) return;
 
@@ -1371,7 +1365,7 @@ client.on('message', message => {
 });
  
 
-var prefix = "-"
+var prefix = "-op"
 client.on('message', message => {
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
@@ -1480,7 +1474,7 @@ if (command == "غرد") {
 
 
 client.on('message', message => {
-    if (message.content === '-roles') {
+    if (message.content === '-oproles') {
         var roles = message.guild.roles.map(roles => `${roles.name}, `).join(' ')
         const embed = new Discord.RichEmbed()
         .setColor('RANDOM')
@@ -1500,7 +1494,7 @@ client.on('message', message => {
 client.on('message', message => {
               if(!message.channel.guild) return;
     var prefix = "-";
-    if(message.content.startsWith('-bc')) {
+    if(message.content.startsWith('-opbc')) {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
@@ -1550,7 +1544,7 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
 
 
 client.on('message', message => {
-var prefix = ('-');
+var prefix = ('-op');
  if (message.content === (prefix) + "icon") {
     var ms = 5000;
     var Icon = [`http://joendzulo.com/wp-content/uploads/2009/02/initial-D-letter-1920x1080.jpg`,`http://www.thaqafnafsak.com/wp-content/uploads/2014/07/The-letter-A-the-alphabet-22186936-2560-2560.jpg`,`https://i.ytimg.com/vi/mV8KxYcUat0/hqdefault.jpg`,`http://pithytees.com/wp-content/uploads/2017/03/mmj-dab-bad-weed-wear-that-design.jpg`];
@@ -1592,7 +1586,7 @@ guild.createChannel('<اسم الروم>', 'text')
 
 
 client.on('message', msg => { 
-if (msg.content.startsWith(`-report`)) {
+if (msg.content.startsWith(`-opreport`)) {
 // تعريف الارجس
    let args = msg.content.split(" ").slice(1);
 // لو ما منشن احد يرد عيله
@@ -1683,7 +1677,7 @@ const Sra7a = [
     'صراحه  |  ما هي أمنياتك المُستقبلية؟‏',
 ]
   client.on('message', message => {
-if (message.content.startsWith('-صراحة ')) {
+if (message.content.startsWith('-opصراحة ')) {
     if(!message.channel.guild) return message.reply('** This command only for servers **');
  var client= new Discord.RichEmbed()
  .setTitle("لعبة صراحة ..")
@@ -1704,7 +1698,7 @@ if (message.content.startsWith('-صراحة ')) {
 
 client.on('message', message => {
 
-    if (message.content === "-قفل") {
+    if (message.content === "-opقفل") {
                         if(!message.channel.guild) return message.reply(' This command only for servers');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
@@ -1716,7 +1710,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
            });
              }
 //™¦༺♚ƙἶղց|MaS♚༺¦™#7105
-if (message.content === "-فتح") {
+if (message.content === "-opفتح") {
     if(!message.channel.guild) return message.reply(' This command only for servers');
 
 if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
@@ -1737,7 +1731,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 
   client.on('message', message => {
               if (!message.channel.guild) return;
-      if(message.content =='-اعضاء')
+      if(message.content =='-opاعضاء')
       var IzRo = new Discord.RichEmbed()
       .setThumbnail(message.author.avatarURL)
       .setFooter(message.author.username, message.author.avatarURL)
@@ -1750,7 +1744,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 
 	
 
-var prefix = "-";
+var prefix = "-op";
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -1839,7 +1833,7 @@ client.on('guildMemberAdd', member => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("-invites")) {
+    if (message.content.startsWith("-opinvites")) {
     message.guild.fetchInvites()
     .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر`))
 
@@ -1860,7 +1854,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content.startsWith("https://discord.gg/FmbZYXF")) {
+    if (message.content.startsWith("-onlypro")) {
  
   message.channel.createInvite({
         thing: true,
@@ -1922,7 +1916,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if(message.content === "-bot") {
+    if(message.content === "-opbot") {
         const embed = new Discord.RichEmbed()
         .setColor("#00FFFF")
   .addField('**الذاكرة المستخدمة 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
@@ -1992,7 +1986,7 @@ const cuttweet = [
 ]
 
 client.on('message', message => {
-  if (message.content === `-كت تويت`) {
+  if (message.content === `-opكت تويت`) {
 message.channel.sendMessage({embed: {
   color: 3547003,
   description: `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`
@@ -2058,7 +2052,7 @@ client.on("guildMemberAdd", member => {
 
 
 
-var prefix = "-";
+var prefix = "-op";
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -2103,7 +2097,7 @@ if (command == "embed") {
 
 
 client.on('message', message => {
-   if (message.content === "-id") {
+   if (message.content === "-opid") {
    let embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .setThumbnail(message.author.avatarURL)
@@ -2148,7 +2142,7 @@ client.on("message", message => {
 
 
 
-var prefix = "-";
+var prefix = "-op";
 client.on('message', message => {
     if(message.content == prefix + 'server') {
         var servername = message.guild.name
@@ -2189,7 +2183,7 @@ client.on('message', message => {
 
 
 
-  var prefix = "-";
+  var prefix = "-op";
     client.on('message', message => {
     if(message.content.startsWith(prefix + '2avatar')) {
          var men = message.mentions.users.first();
@@ -2259,4 +2253,4 @@ message.channel.sendEmbed(avatar)
 
 
 
-client.login("NDY0MTM5NTYyNTU4NDIzMDQw.Dh6nPg.rCqnFnHGuDQxReZhrrB0cYSnfnc");
+client.login("NDc5Mjg1ODUxODIyNjIwNzE0.DlXG4g.RjKgB4JAH--eucg93fgzHX1m_bw");
