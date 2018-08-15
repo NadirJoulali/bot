@@ -1519,7 +1519,7 @@ let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
        .addField('Server', message.guild.name)
        .addField('Sender', message.author.username)
        .addField('Message', args)
-       .setImage("https://i.imgur.com/9MX8dGX.jpg")
+       .setImage("https://imgur.com/a/hugPg6h")
        .setThumbnail(message.author.avatarURL)
        .setFooter(copy, client.user.avatarURL);
     m.send({ embed: bc })
