@@ -191,7 +191,7 @@ client.on('message', msg => {
 
 client.on('message', msg => {
   if (msg.content === 'السلام عليكم') {
-    msg.reply(' :heartpulse:  وعليكم ● السَلٱمٌ ● عـَلـْيگمّ-● ۈرحـْمّـٌة ● ٱللـّہ ● ﯙبُرگـّاتہ :heartpulse: ');
+    msg.reply(':heartpulse:  وعليكم ● السَلٱمٌ ● عـَلـْيگمّ-● ۈرحـْمّـٌة ● ٱللـّہ ● ﯙبُرگـّاتہ :heartpulse:');
   }
 });
 
@@ -379,7 +379,7 @@ client.on('message', message => {
      .setFooter('Requested by '+message.author.username, message.author.avatarURL)
    .setDescription(`**There's No Color With This Number ** :x: `)
    .setColor(`ff0000`)
-
+d
     if(!isNaN(args) && args.length > 0)
     
 
@@ -840,7 +840,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`in 60 server -help And 130 user`,"http://twitch.tv/ninja")
+  client.user.setGame(`in 60 server -ophelp And 9000 user`,"https://www.twitch.tv/tobrs5")
    client.user.setStatus("dnd")
 });
 
