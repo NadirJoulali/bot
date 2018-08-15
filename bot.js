@@ -840,7 +840,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers `);
     console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`in 60 server -ophelp And 9000 user`,"https://www.twitch.tv/tobrs5")
+  client.user.setGame(`[op]in 1 server -ophelp And 1000 user`,"https://www.twitch.tv/tobrs5")
    client.user.setStatus("dnd")
 });
 
@@ -1546,7 +1546,7 @@ client.on('message', message => {
 var prefix = ('-op');
  if (message.content === (prefix) + "icon") {
     var ms = 5000;
-    var Icon = [`http://joendzulo.com/wp-content/uploads/2009/02/initial-D-letter-1920x1080.jpg`,`http://www.thaqafnafsak.com/wp-content/uploads/2014/07/The-letter-A-the-alphabet-22186936-2560-2560.jpg`,`https://i.ytimg.com/vi/mV8KxYcUat0/hqdefault.jpg`,`http://pithytees.com/wp-content/uploads/2017/03/mmj-dab-bad-weed-wear-that-design.jpg`];
+    var Icon = [`https://imgur.com/Eqo0SM1`];
     var i = -1;
     var j = 0;
    setInterval(function (){
