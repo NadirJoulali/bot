@@ -1,21 +1,31 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 const client = new Discord.Client();
 
-
-
-
-
-
-
+ 
 client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`NADIR BOT STARTED`);
-        console.log(`---------------`);
-      console.log(`ON ${client.guilds.size} Servers `);
-    console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`in 1 offcial server -help And 570 user`,"http://twitch.tv/Nadir44king")
-   client.user.setStatus("dnd")
+client.user.setGame(`Updating Bot V2.0`,"http://twitch.tv/Nadir44king")
+  console.log('')
+  console.log('')
+  console.log('╔[═════════════════════════════════════════════════════════════════]╗')
+  console.log(`[Start] ${new Date()}`);
+  console.log('╚[═════════════════════════════════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════════════════════════════]╗');
+  console.log(`Logged in as * [ " ${client.user.username} " ]`);
+  console.log('')
+  console.log('Informations :')
+  console.log('')
+  console.log(`servers! [ " ${client.guilds.size} " ]`);
+  console.log(`Users! [ " ${client.users.size} " ]`);
+  console.log(`channels! [ " ${client.channels.size} " ]`);
+  console.log('╚[════════════════════════════════════]╝')
+  console.log('')
+  console.log('╔[════════════]╗')
+  console.log(' Bot Matra9a Is Online')
+  console.log('╚[════════════]╝')
+  console.log('')
+  console.log('')
 });
 
 
@@ -38,41 +48,8 @@ client.on('ready', () => {
 
 
 
-console.log('Mtera9a Bot Ready');
-client.on('ready', () => {
-  console.log(`im redey`);
-});
 
 
-
-
-
-client.on('message', msg => {
-  if (msg.content === 'الشعار') {
-    msg.reply('『ǨȰ』');
-  }
-});
-
-client.on('message', msg => {
-  if (msg.content === 'الرابط') {
-    msg.reply('https://discord.gg/ghwykfw  :)');
-  }
-});
-
-
-client.on('message', msg => {
-  if (msg.content === 'شعار') {
-    msg.reply('『ǨȰ』 تفضل روح ادعس يوحش  :)');
-  }
-});
-
-
-
-client.on('message', msg => {
-  if (msg.content === 'هلا') {
-    msg.reply('هلا حبيبي امر انا تحت  خدمتك  :)');
-  }
-});
 
 client.on('message', msg => {
   if (msg.content === '-help') {
@@ -80,18 +57,6 @@ client.on('message', msg => {
   }
 });
 
-
-
-
-client.on('message', msg => {
-  if (msg.content === 'السلام عليكم') {
-    msg.reply(' :heartpulse:  وعليكم ● السَلٱمٌ ● عـَلـْيگمّ-● ۈرحـْمّـٌة ● ٱللـّہ ● ﯙبُرگـّاتہ :heartpulse: ');
-  }
-});
-
-
-
-;
 
 
 client.on("message", message => {
@@ -169,39 +134,208 @@ client.on("message", message => {
 });
 
 
-var prefix = "-";
-var cats = ["https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg","http://www.dogbazar.org/wp-content/uploads/2014/09/british-bull-dog-puppies.jpg","http://cdn2-www.dogtime.com/assets/uploads/gallery/german-shepherd-dog-breed-pictures/standing-7.jpg","http://cdn.akc.org/Marketplace/Breeds/German_Shepherd_Dog_SERP.jpg","https://animalso.com/wp-content/uploads/2016/12/black-german-shepherd_2.jpg","https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpg","https://www.petfinder.com/wp-content/uploads/2012/11/101438745-cat-conjunctivitis-causes.jpg","http://www.i-love-cats.com/images/2015/04/12/cat-wallpaper-38.jpg","https://www.aspca.org/sites/default/files/cat-care_urine-marking_main-image.jpg","https://s-media-cache-ak0.pinimg.com/originals/f0/3b/76/f03b7614dfadbbe4c2e8f88b69d12e04.jpg","http://www.rd.com/wp-content/uploads/sites/2/2016/04/15-cat-wants-to-tell-you-attention.jpg","https://www.thelocal.de/userdata/images/article/fa6fd5014ccbd8f4392f716473ab6ff354f871505d9128820bbb0461cce1d645.jpg","https://www.adelaidezoo.com.au/wp-content/uploads/sites/2/animals/GiantPanda3Slider.jpg","http://imagem.band.com.br/f_230168.jpg"]
-    client.on('message', message => {
-        var args = message.content.split(" ").slice(1);
-    if(message.content.startsWith(prefix + 'حيونات')) {
-         var cat = new Discord.RichEmbed()
-.setImage(cats[Math.floor(Math.random() * cats.length)])
-message.channel.sendEmbed(cat);
+
+
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`:rose:  ولكم نورت السيرفر:rose: 
+:crown:اسم العضو  ${member}:crown:  
+انت العضو رقم ${member.guild.memberCount} `) 
+}).catch(console.error)
+})
+
+
+
+
+
+client.on('message',message =>{
+    var prefix = "-";
+    if(message.content.startsWith(prefix + 'top')) {
+  message.guild.fetchInvites().then(i =>{
+  var invites = [];
+   
+  i.forEach(inv =>{
+    var [invs,i]=[{},null];
+     
+    if(inv.maxUses){
+        invs[inv.code] =+ inv.uses+"/"+inv.maxUses;
+    }else{
+        invs[inv.code] =+ inv.uses;
     }
+        invites.push(`invite: ${inv.url} inviter: ${inv.inviter} \`${invs[inv.code]}\`;`);
+   
+  });
+  var embed = new Discord.RichEmbed()
+  .setColor("#000000")
+  .setDescription(`${invites.join(`\n`)+'\n\n**By:** '+message.author}`)
+  .setThumbnail("https://media.discordapp.net/attachments/471700655484960779/489865535257968641/levelup.png?width=501&height=282")
+           message.channel.send({ embed: embed });
+   
+  });
+   
+    }
+  });
+  
+
+
+client.on('message', message => {
+sql.open("./score.sqlite");
+  sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+    if (!row) {
+      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
+    } else {
+      let curLevel = Math.floor(0.3 * Math.sqrt(row.points + 1));
+      if (curLevel > row.level) {
+        row.level = curLevel;
+        sql.run(`UPDATE scores SET points = ${row.points + 1}, level = ${row.level} WHERE userId = ${message.author.id}`);
+var Canvas = require('canvas')
+var jimp = require('jimp')
+
+const w = ['./levelup.png'];
+
+        let Image = Canvas.Image,
+            canvas = new Canvas(401, 202),
+            ctx = canvas.getContext('2d');
+        ctx.patternQuality = 'bilinear';
+        ctx.filter = 'bilinear';
+        ctx.antialias = 'subpixel';
+        ctx.shadowColor = 'rgba(0, 0, 0, 0.4)';
+        ctx.shadowOffsetY = 2;
+        ctx.shadowBlur = 2;
+        fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
+            if (err) return console.log(err);
+            let BG = Canvas.Image;
+            let ground = new Image;
+            ground.src = Background;
+            ctx.drawImage(ground, 0, 0, 401, 202);
+
+})
+
+                let url = message.author.displayAvatarURL.endsWith(".webp") ? message.author.displayAvatarURL.slice(5, -20) + ".png" : message.author.displayAvatarURL;
+                jimp.read(url, (err, ava) => {
+                    if (err) return console.log(err);
+                    ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+                        if (err) return console.log(err);
+
+                        //Avatar
+                        let Avatar = Canvas.Image;
+                        let ava = new Avatar;
+                        ava.src = buf;
+                        ctx.drawImage(ava, 152, 27, 95, 95);
+                        
+                                                //wl
+                        ctx.font = '20px Arial';
+                        ctx.fontSize = '25px';
+                        ctx.fillStyle = "#b2b4b7";
+                        ctx.textAlign = "center";
+                        ctx.fillText("LEVEL UP!", 210, 154);
+                        //ur name
+                        ctx.font = '20px Arial Bold';
+                        ctx.fontSize = '28px';
+                        ctx.fillStyle = "#8b8d91";
+                        ctx.textAlign = "center";
+                        ctx.fillText(`LVL ${curLevel}`, 213, 190);
+message.channel.send(`**:up: | ${message.author.username} leveled up!**`)
+message.channel.sendFile(canvas.toBuffer())
+})
+})
+        
+      };
+      sql.run(`UPDATE scores SET points = ${row.points + 1} WHERE userId = ${message.author.id}`);
+    }
+  }).catch(() => {
+    console.error;
+    sql.run("CREATE TABLE IF NOT EXISTS scores (userId TEXT, points INTEGER, level INTEGER)").then(() => {
+      sql.run("INSERT INTO scores (userId, points, level) VALUES (?, ?, ?)", [message.author.id, 1, 0]);
+    });
+  });
+
+  if (message.content.startsWith(prefix + "level")) {
+    sql.get(`SELECT * FROM scores WHERE userId ="${message.author.id}"`).then(row => {
+      if (!row) return message.reply("Your current level is 0");
+      message.reply(`Your current level is ${row.level}`);
+ });
+
+
+}
+	})
+	
+	
+client.on('message', message => {
+    var prefix = "-";
+    if(message.content.startsWith(prefix + 'rep')) {
+      if(!message.channel.guild) return;
+                    moment.locale('en');
+                  var getvalueof = message.mentions.users.first()
+                    if(!getvalueof) return message.channel.send(`**:mag: |  ${message.author.username}, the user could not be found.    **`);
+                       if(getvalueof.id == message.author.id) return message.channel.send(`**${message.author.username}, you cant give yourself a reputation !**`)
+    if(profile[message.author.id].reps != moment().format('L')) {
+            profile[message.author.id].reps = moment().format('L');
+            profile[getvalueof.id].rep = Math.floor(profile[getvalueof.id].rep+1);
+         message.channel.send(`** :up:  |  ${message.author.username} has given ${getvalueof} a reputation point!**`)
+        } else {
+         message.channel.send(`**:stopwatch: |  ${message.author.username}, you can raward more reputation  ${moment().endOf('day').fromNow()} **`)
+        }
+       }
 });
 
 
 
-
-client.on('ready', () => {
-     client.user.setActivity("انا اشاهدك حبيبي by مطرقة",{type: 'WATCHING'});
-
-});
-
-
-client.on('message', msg => {
-  if (msg.content === 'في حد') {
-    msg.reply('مافي حد في بس انا هههه  :)');
-  }
-});
+ 
 
 
 
 
 
+client.on("message", message => {
+    var prefix = "-"
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "minecraft") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://visage.surgeplay.com/full/256/${args}`, "skin.png");
+    message.channel.send(image)
+        }
+    });
 
 
-
+[
+    {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/72/twitter/134/face-with-look-of-triumph_1f624.png",
+        "answers": ["ًںک¤"]
+    },
+    {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/baby_1f476.png",
+        "answers": ["ًں‘¶"]
+    },
+    {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/japanese-goblin_1f47a.png",
+        "answers": ["ًں‘؛"]
+    },
+    {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/see-no-evil-monkey_1f648.png",
+        "answers": ["ًں™ˆ"]
+    },
+        {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/flag-for-yemen_1f1fe-1f1ea.png",
+        "answers": ["ًں‡¾ًں‡ھ"]
+    },
+        {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/comet_2604.png",
+        "answers": ["âک„ï¸ڈ"]
+    },
+        {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/trident-emblem_1f531.png",
+        "answers": ["ًں”±"]
+    },
+        {
+        "type": "https://emojipedia-us.s3.amazonaws.com/thumbs/120/twitter/134/fleur-de-lis_269c.png",
+        "answers": ["âڑœï¸ڈ"]
+    }
+    
+]
 
 var prefix = "-";
 client.on('message', message => {
@@ -600,16 +734,7 @@ message.channel.sendEmbed(cat);
 
 
 
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`NADIR BOT STARTED`);
-        console.log(`---------------`);
-      console.log(`ON ${client.guilds.size} Servers `);
-    console.log(`---------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`in 1 offcial server -help And 570 user`,"http://twitch.tv/Nadir44king")
-   client.user.setStatus("dnd")
-});
+
 
 
 
@@ -818,7 +943,7 @@ client.on('guildMemberAdd', member => {
     .setColor('GREEN')
     .setFooter('The Matra9a Bot', 'https://cdn.discordapp.com/icons/390551815072251904/418fa2788d8115808951c9881ba8f190.jpg')
 
-var channel =member.guild.channels.find('owners-falcom', 'owner')
+var channel =member.guild.channels.find('name', 'owners-falcom')
 if (!channel) return;
 channel.send({embed : embed});
 });
@@ -880,13 +1005,33 @@ message.channel.send(image)
 
 
 
-
+client.on('message', function(message) {
+    if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+            let command = message.content.split(" ")[0];
+        if(message.content.includes('discord.gg')){
+        message.reply (' ')
+           if(!message.channel.guild) return message.reply('** This command only for servers**');
+     message.member.addRole(message.guild.roles.find('name', 'Muted'));
+    const embed500 = new Discord.RichEmbed()
+      .setTitle(":x: | تمت معاقبتك")
+            .addField(`** لقد قمت بمخالفة قوانين السيرفر من خلال نشر سيرفرات اخرى  **` , `**ملاحظة  : إن كآن هذآ الميوت عن طريق الخطأ تكلم مع الادآرة**`)
+      .addField(`by`,`Matra9a `)
+            .setColor("c91616")
+            .setThumbnail(`${message.author.avatarURL}`)
+            .setAuthor(message.author.username, message.author.avatarURL)
+        .setFooter(`${message.guild.name} Server`)
+     message.channel.send(embed500)
+   
+       
+    }
+    }
+})
 
 
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('owners-falcom', 'falcom');
+    let channel = member.guild.channels.find('name', 'owners-falcom');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
@@ -917,7 +1062,7 @@ client.on('guildMemberAdd', member => {
         .setColor('RED')
         .setFooter(`==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
-    var channel =member.guild.channels.find('falcom', 'owners-falcom')
+    var channel =member.guild.channels.find('name', 'owners-falcom')
     if (!channel) return;
     channel.send({embed : embed});
     }) 
@@ -1283,23 +1428,6 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 
 
 	
-
-var prefix = "-";
-
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-
-
-
-
-
-
 
 
 
