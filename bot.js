@@ -1320,7 +1320,7 @@ client.on('message', message => {
   .addField("الاسم:",`${message.author.username}`, true)
   .addField('تاج:',"#" +  message.author.discriminator, true)
   .addField("ايدي:", message.author.id, true)
-  .addField("وقت دخوله لدسكورد:", message.author.createdAt, true)
+  .addField("Create At:", message.author.createdAt, true)
      
      
   message.channel.sendEmbed(embed);
