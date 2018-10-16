@@ -59,15 +59,6 @@ client.on('message', msg => {
   }
 });
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-
-client.on('message', msg => {
-  if (msg.content === 'ق2') {
-    msg.reply('لم يتم اضافة القوانين رقم 2 او ق2 لعدم وجود قوانين كثير اذا كنت تبي تدعمنا او توصل لصاحب البوت واعطائنا افكارك تواصل اكتب الامر -support');
-  }
-});
 
 
 client.on('message', msg => {
@@ -163,8 +154,8 @@ client.on("message", message => {
  if (message.content === "-invite") {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
-      .setFooter('المطرقة Premium Bot:heart: جميع الحقو8 محفوظة 2017 لــبوت')
-      .addField(' شكرا لاستخدمك مطرقة بوت ', `هنا رابط بوتك`)
+      .setFooter('المطرقة Premium Bot:heart: جميع حقوق محفوظة لمطرقة')
+      .addField(' شكرا لاستخدمك مطرقة بوت ', `https://discordapp.com/oauth2/authorize?client_id=494572525708115968&permissions=8&scope=bot`)
   message.author.send({embed});
 
  }
@@ -268,43 +259,7 @@ client.on('message', message => {
         }
     });
 
-client.on('message', message => {
-          let args = message.content.split(' ').slice(1);
-   if(message.content.split(' ')[0] == '-color'){
-           const embedd = new Discord.RichEmbed()
-     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
-   .setDescription(`**There's No Color With This Number ** :x: `)
-   .setColor(`ff0000`)
 
-    if(!isNaN(args) && args.length > 0)
-    
-
-if    (!(message.guild.roles.find("name",`${args}`))) return  message.channel.sendEmbed(embedd);
-
-
-       var a = message.guild.roles.find("name",`${args}`)
-                if(!a)return;
-const embed = new Discord.RichEmbed()
-                    
-     .setFooter('Requested by '+message.author.username, message.author.avatarURL)
-   .setDescription(`**Color Changed To Successfully** :white_check_mark: `)
- 
-   .setColor(`${a.hexColor}`)
-  message.channel.sendEmbed(embed);
-          if (!args)return;
-setInterval(function(){})
-                  let count = 0;
-                  let ecount = 0;
-        for(let x = 1; x < 201; x++){
-           
-            message.member.removeRole(message.guild.roles.find("name",`${x}`))
-          
-            }
-                message.member.addRole(message.guild.roles.find("name",`${args}`));
-        
-            
-    }
-});
 
 
 client.on('message', message => {
@@ -348,7 +303,7 @@ client.on("message", message => {
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setFooter('© Premium Bot:heart: جميع الحقو8 محفوظة 2017 لــبوت')  
-      .addField('سيرفر الدعم الفني', `  https://discord.gg/ghwykfw  `)
+      .addField('سيرفر الدعم الفني', `  https://discord.gg/eSdJ4mF  `)
   message.author.send({embed});
 
  }
@@ -492,42 +447,10 @@ client.on("message", message => {
 
 
 
-var prefix = "-";
-var rebel = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png"]
-    client.on('message', message => {
-        var args = message.content.split(" ").slice(1);
-    if(message.content.startsWith(prefix + 'لو خيروك')) {
-         var cat = new Discord.RichEmbed()
-.setImage(rebel[Math.floor(Math.random() * rebel.length)])
-message.channel.sendEmbed(cat);
-    }
-});
 
 
 
 
-
-
-
-
-const TOKEN = "";
-
-function commandIs(str, msg){
-    return msg.content.toLowerCase().startsWith('-' + str);
-}
-
-function pluck(array) {
-    return array.map(function(item) { return item["name"]; });
-}
-
-function hasRole(mem, role) {
-    if(pluck(mem.roles).includes(role)){
-        return true;
-    } else {
-        return false;
-    }
-
-  }
   
   
   
@@ -781,7 +704,7 @@ if (message.content.startsWith("-cv")) {
 
 
 client.on('message', message => {
- if (message.content.startsWith('-صراحه')) {
+ if (message.content.startsWith('-صراحة')) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
   var client= new Discord.RichEmbed()
   .setTitle("لعبة صراحة ..")
@@ -888,33 +811,10 @@ client.on('guildMemberAdd', member => {
     .setColor('GREEN')
     .setFooter('The Matra9a Bot', 'https://cdn.discordapp.com/icons/390551815072251904/418fa2788d8115808951c9881ba8f190.jpg')
 
-var channel =member.guild.channels.find('✏➖𝓒ḫằṯ', '✏➖𝓒ḫằṯ')
+var channel =member.guild.channels.find('owners-falcom', 'owner')
 if (!channel) return;
 channel.send({embed : embed});
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-client.on('message', message => {
-    if (message.content.startsWith("-invite")) {
-    message.guild.fetchInvites()
-    .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر`))
-     
-    }
-});
-
-
 
 
 
@@ -933,11 +833,6 @@ client.on('message', message => {
   message.channel.send(embed);
 }
 });
-
-
-
-
-
 
 
 
@@ -977,33 +872,14 @@ message.channel.send(image)
 
 
 
-client.on('guildMemberAdd', (member) => {
-member.addRole(member.guild.roles.find('name', 'not active'));
-});
 
 
 
 
-
-
-client.on('guildMemberRemove', member => {
-    var embed = new Discord.RichEmbed()
-    .setAuthor(member.user.username, member.user.avatarURL)
-    .setThumbnail(member.user.avatarURL)
-    .setTitle(`خرج عضو`)
-    .setDescription(`الى اللقاء...`)
-    .addField(':bust_in_silhouette:   تبقي',`**[ ${member.guild.memberCount} ]**`,true)
-    .setColor('RED')
-    .setFooter(`The Metra9a Bot`, '')
-
-var channel =member.guild.channels.find('✏➖𝓒ḫằṯ', '✏➖𝓒ḫằṯ')
-if (!channel) return;
-channel.send({embed : embed});
-});
 
 
 client.on('guildMemberAdd', member => {
-    let channel = member.guild.channels.find('✏➖𝓒ḫằṯ', '✏➖𝓒ḫằṯ');
+    let channel = member.guild.channels.find('owners-falcom', 'falcom');
     let memberavatar = member.user.avatarURL
       if (!channel) return;
     let embed = new Discord.RichEmbed()
@@ -1034,7 +910,7 @@ client.on('guildMemberAdd', member => {
         .setColor('RED')
         .setFooter(`==== نــتــمــنــآ لــكــم آســتــمـــتــآع ====`, 'https://cdn.discordapp.com/attachments/397818254439219217/399292026782351381/shy.png')
     
-    var channel =member.guild.channels.find('✏➖𝓒ḫằṯ', '✏➖𝓒ḫằṯ')
+    var channel =member.guild.channels.find('falcom', 'owners-falcom')
     if (!channel) return;
     channel.send({embed : embed});
     }) 
@@ -1272,27 +1148,6 @@ var prefix = ('-');
 
 
 
-client.on('message', msg => { 
-if (msg.content.startsWith(`createChannel`)) {
-guild.createChannel('<اسم الروم>', 'text')
-  .then(console.log)
-  .catch(console.error);
-}
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const Sra7a = [
     'صراحه  |  صوتك حلوة؟',
     'صراحه  |  التقيت الناس مع وجوهين؟',
@@ -1387,7 +1242,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' لي
                message.reply("تم تقفيل الشات :white_check_mark: ")
            });
              }
-//™¦༺♚ƙἶղց|MaS♚༺¦™#7105
+
 if (message.content === "-فتح") {
     if(!message.channel.guild) return message.reply(' This command only for servers');
 
@@ -1435,38 +1290,6 @@ client.on('message', message => {
 
 
 
-if (command == "اعادة") {
-    let say = new Discord.RichEmbed()
-.setImage("https://i.imgur.com/soZMkDC.jpg")
-  .setAuthor(message.author.username)
-    .setDescription(args.join("  "))
-    .setColor(0x00AE86)
-    message.channel.sendEmbed(say);
-    message.delete();
-  }
-
-
-});
-
-
-	
-	
-
-
-
-
-
-
-client.on('message', message => {
-    if (message.content.startsWith("-invites")) {
-    message.guild.fetchInvites()
-    .then(invites => message.channel.send(`انت جبت   ${invites.find(invite => invite.inviter.id === message.author.id).uses} عضو لهاذا السيرفر`))
-
-
-
-     
-    }
-});
 
 
 
@@ -1494,10 +1317,10 @@ client.on('message', message => {
    let embed = new Discord.RichEmbed()
   .setColor("RANDOM")
   .setThumbnail(message.author.avatarURL)
-  .addField("Name:",`${message.author.username}`, true)
-  .addField('Discrim:',"#" +  message.author.discriminator, true)
-  .addField("ID:", message.author.id, true)
-  .addField("Create At:", message.author.createdAt, true)
+  .addField("الاسم:",`${message.author.username}`, true)
+  .addField('تاج:',"#" +  message.author.discriminator, true)
+  .addField("ايدي:", message.author.id, true)
+  .addField("وقت دخوله لدسكورد:", message.author.createdAt, true)
      
      
   message.channel.sendEmbed(embed);
