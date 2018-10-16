@@ -3,13 +3,20 @@ const client = new Discord.Client();
 
 
 
+
+
+
+
 client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`NADIR BOT STARTED`);
+        console.log(`---------------`);
+      console.log(`ON ${client.guilds.size} Servers `);
+    console.log(`---------------`);
   console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setGame(`in 1 offcial server -help And 570 user`,"http://twitch.tv/Nadir44king")
+   client.user.setStatus("dnd")
 });
-
-
-
-
 
 
 
